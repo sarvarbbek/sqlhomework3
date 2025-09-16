@@ -59,6 +59,23 @@ alter table Products
 add constraint FK_products foreign key (CategoryID)
 references Categories(CategoryID)
 on delete cascade 
-on update cascade
+on update cascade  
+
+--BULK INSERT — bu SQL Server’da tashqi fayldan (masalan, .txt yoki .csv)
+--ma’lumotlarni juda tez va samarali tarzda jadvalga yuklash uchun ishlatiladigan buyruq.
+
+--SQL Server’ga quyidagi fayl formatlarini import qilish mumkin:
+--CSV, TXT, XML, JSON
+
+--NULL — qiymat yo‘qligini (noma’lum yoki bo‘sh) bildiradi.
+--NOT NULL — ustunda qiymat majburiy kiritilishi kerakligini bildiradi, bo‘sh qoldirib bo‘lmaydi.
+
+--Comment — SQL query maqsadini tushuntirish uchun yoziladi.
+--    -- bir qatorli
+--    /* ko‘p qatorli */
+
+--IDENTITY ustuni — har bir yangi yozuv qo‘shilganda avtomatik ravishda ketma-ket son beruvchi ustun.
 
 
+--FOREIGN KEY — jadvalni boshqa jadval bilan bog‘lash uchun ishlatiladi.
+--Maqsadi: ma’lumotlarning izchilligi va yaxlitligini saqlash.
